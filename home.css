@@ -97,12 +97,13 @@
   display: flex;
   flex-flow: row wrap;
   /* gap: 5px; */
-  align-items: flex-start;
+  /* align-items: flex-start; */
+  justify-content: space-around;
   max-width: 82rem;
   margin: 0 auto;
 }
 .card-info .container .contain {
-  max-width: 500px;
+  width: 500px;
   height: 500px;
   flex: 1 0 calc(50% - 2rem);
   margin: 0 1rem 2.4rem;
@@ -112,14 +113,13 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  align-items: flex-end;
+  /* align-items: flex-end; */
 }
 .card-info .container .contain h1 {
   margin: 20px 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* text-align: center; */
 }
 .card-info .container .contain p {
   text-align: justify;
@@ -144,4 +144,91 @@
 }
 .card-info .container .contain._6 {
   background: #d9d9d9;
+}
+
+.clients {
+  width: 100%;
+  padding: 20px 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.clients > h1 {
+  margin: 8rem 0;
+  font-size: 80px;
+}
+.clients h1 span {
+  color: var(--main);
+}
+.clients .con {
+  padding: 5rem;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 208, 31, 0.2);
+  background-color: rgba(255, 208, 31, 0.2);
+}
+
+.clients .con .card-cont .inner-card {
+  background-color: #ffff;
+  padding: 50px 70px;
+
+  position: relative;
+  border-radius: 20px;
+}
+.clients .con .card-cont .inner-card .head {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  top: -20px;
+  left: 20px;
+  justify-content: space-between;
+}
+.clients .con .card-cont .inner-card .head img {
+  height: 150px;
+}
+.clients .con .card-cont .inner-card .head h1 {
+  padding: 20px 50px;
+  width: fit-content;
+  word-wrap: break-word;
+  background-color: #ffe47c;
+  font-size: 1rem;
+  border-radius: 50px;
+}
+.clients .con .card-cont .inner-card p {
+  margin-top: 100px;
+  text-align: center;
+}
+.clients .con .card-cont .inner-card .p i {
+  margin-top: 20px;
+  text-align: end;
+}
+.align-left {
+  float: left;
+  margin-right: 20px;
+}
+
+.align-right {
+  float: right;
+  margin-left: 20px;
+}
+
+.slide-in {
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.align-left.slide-in {
+  transform: translateX(-30%) scale(0.95);
+}
+
+.align-right.slide-in {
+  transform: translateX(30%) scale(0.95);
+}
+
+.slide-in.active {
+  opacity: 1;
+  transform: translateX(0%) scale(1);
 }
